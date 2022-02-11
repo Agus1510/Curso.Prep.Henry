@@ -188,7 +188,7 @@ function redondearHaciaArriba(num) {
 function numeroRandom() {
   //Generar un número al azar entre 0 y 1 y devolverlo
   //Pista: investigá qué hace el método Math.random()
-  return (Math.random()*2);
+  return (Math.random()*1);
 }
 
 function esPositivo(numero) {
@@ -198,14 +198,21 @@ function esPositivo(numero) {
   //Si el número es 0, devuelve false
   var positivo = 'Es positivo';
   var negativo = 'Es negativo';
-  if (numero < 0){
+  if (numero == 0){
+    return false;
+  }
+  else{  
+    if (numero < 0){
     return negativo;
-  }
-  else{
-    return positivo;
-  }
+    }
+    else{
+      return positivo;
+    }
 
-}
+  }
+}  
+
+
 
 function agregarSimboloExclamacion(str) {
   // Agrega un símbolo de exclamación al final de la string "str" y devuelve una nueva string
@@ -276,8 +283,6 @@ function esVocal(letra){
       return novocal;
     }
   }
-
-esVocal('f');
 
 
 // No modificar nada debajo de esta línea
