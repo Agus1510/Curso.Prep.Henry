@@ -107,17 +107,18 @@ function multiplicarArgumentos() {
   // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
   // Escribe tu código aquí:
   const args= [...arguments];
+  result = 1;
   if (!args.length){
     return 0;
   }
   else{
-    const result = args.reduce((total,item)=>{
-      return item?item * total : + total
-    },1)
-    return result
+    for (let i = 0; i < args.length; i++){
+      result *= args[i];
+    }
   }
+  return result;
   }
-multiplicarArgumentos(5, 5);
+multiplicarArgumentos(10,0,10);
 
 
 function cuentoElementos(arreglo){
@@ -140,11 +141,11 @@ function diaDeLaSemana(numeroDeDia) {
   //si el día corresponde a Sábado o Domingo y “Es dia Laboral” en caso contrario. 
   //Escribe tu código aquí
   switch (numeroDeDia){
-    case 0: case 6:
+    case 1: case 7:
       return ('Es fin de semana');
       break;  
-    case 1: case 2: case 3: case 4: case 5:
-      return ('Es dia laboral');
+    case 2: case 3: case 4: case 5: case 6:
+      return ('Es dia Laboral');
       break;
   } 
 } 
@@ -177,16 +178,15 @@ function mesesDelAño(array) {
   // Tu código:
   var meses = [];
   for (let i = 0; i < array.length; i++){
-    if( array[i] == 'Enero' || array[i] == 'Marzo' || array[i] == 'Noviembre'){
+    if( array[i] == "Enero" || array[i] == "Marzo" || array[i] == "Noviembre"){
       meses.push(array[i]);
     }
   }
-  if (meses == ['Enero', 'Marzo', 'Noviembre']){
+  if (meses.includes('Enero','Noviembre','Marzo')){
     return meses;
   }
-  else return 'No se encontraron los meses pedido';
+  else return 'No se encontraron los meses pedidos';
 }
-
 
 function mayorACien(array) {
   //La función recibe un array con enteros entre 0 y 200. Recorrer el array y guardar en un nuevo array sólo los
