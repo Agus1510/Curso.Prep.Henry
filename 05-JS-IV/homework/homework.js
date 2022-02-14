@@ -169,7 +169,6 @@ function agregarMetodoCalculoDescuento(producto) {
 
 
   producto.calcularPrecioDescuento();
-  console.log(typeof producto.calcularPrecioDescuento);
   return producto;
 }
 
