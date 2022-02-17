@@ -1,0 +1,23 @@
+/* myStyle.css */
+#thirdDiv {
+    font-size: 50px;
+    height: 600px;
+    width: 500px;
+    background : darksalmon;
+    padding: 50px;
+    margin: auto;
+    border: 5px solid black;
+}
+#spanId {
+    font-size: 25px;
+    margin: 50px;
+    background-color: aliceblue;
+}
+body{
+    background-image: url("https://i.pinimg.com/originals/c1/a7/1c/c1a71c6991a318cca0a9ecb37b2c82ae.jpg");
+        margin: auto;
+        width: 60%;
+        border: 5px solid#755f5f;
+        padding: 10px;
+        text-align: center;
+}
